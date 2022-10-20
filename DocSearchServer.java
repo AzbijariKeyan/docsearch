@@ -35,6 +35,8 @@ class Handler implements URLHandler {
     Handler(String directory) throws IOException {
       this.files = FileHelpers.getFiles(Paths.get(directory));
     }
+    public Handler() {
+    }
     public String handleRequest(URI url) throws IOException {
       return "Don't know how to handle that path!";
     }
