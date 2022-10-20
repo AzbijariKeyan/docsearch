@@ -38,7 +38,14 @@ class Handler implements URLHandler {
     public Handler() {
     }
     public String handleRequest(URI url) throws IOException {
-      return "Don't know how to handle that path!";
+        List<File> nums = new ArrayList<>();
+     //   for(int i = 0; i < getFiles(); i++)
+        if (url.getPath().equals("/")) {
+            return String.format("Number: %d", num);
+        } else if (url.getPath().equals("/increment")) {
+            num += 1;
+            return String.format("Number incremented!");
+        return "Don't know how to handle that path!";
     }
 }
 
